@@ -8,7 +8,7 @@ class Quotes extends Component {
 
   render() {
 
-    const quotesList = this.props.quotes.map(quote => <QuoteCard key={quote.id} quote={quote}
+    const quoteList = this.props.quotes.map(quote => <QuoteCard key={quote.id} quote={quote}
       removeQuote={this.props.removeQuote}
       upvoteQuote={this.props.upvoteQuote}
       downvoteQuote={this.props.downvoteQuote} />)
@@ -23,7 +23,7 @@ class Quotes extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              {quotesList}
+              {quoteList}
             </div>
           </div>
         </div>

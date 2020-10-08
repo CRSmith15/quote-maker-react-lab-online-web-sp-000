@@ -8,12 +8,12 @@ export default (state = [], action) => {
 
     case 'UPVOTE_QUOTE':
       return state.map(quote => {
-        return quote.id === action.quoteId ? {...quote, votes: quote.votes + 1} :quote 
+        return quote.id === action.quoteId ? {...quote, votes: quote.votes + 1} :quote
       })
 
     case 'DOWNVOTE_QUOTE':
       return state.map(quote => {
-        return quote.id === action.quoteId && quote.votes > 0 ? {...quote, votes: quote.votes - 1 } : quote 
+        return quote.id === action.quoteId && quote.votes > 0 ? {...quote, votes: quote.votes - 1 } : quote
       })
 
       default:
